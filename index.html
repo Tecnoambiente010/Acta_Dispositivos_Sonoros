@@ -73,8 +73,8 @@ function friendly(t){return t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').re
 $('#view').onclick=()=>generate(true);$('#download').onclick=()=>generate(false);$('#close').onclick=()=>$('#modal').close();render();
 (async()=>{try{const saved=await dbOp('readonly',s=>s.get('draft'));if(saved)message('Hay un borrador guardado. Pulse «Recuperar borrador» para abrirlo.')}catch(e){message('Este navegador no permite guardar localmente. Utilice Exportar respaldo antes de cerrar.')}})();
 // Para compartir el historial, complete ambos valores según la guía.
-const SERVIDOR = '';
-const CLAVE_PUBLICA = '';
+const SERVIDOR = 'https://kpjzwklprgaybopcxmsx.supabase.co';
+const CLAVE_PUBLICA = 'sb_publishable_quZH70i81C1YXGanyGE7nA_UbcyJBZ6';
 const nube = Boolean(SERVIDOR || CLAVE_PUBLICA);
 let token = '';
 let archivos = [];
